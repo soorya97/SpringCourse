@@ -36,11 +36,11 @@
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
 
-<!--		disabling security for faster developments-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-security</artifactId>-->
-<!--		</dependency>-->
+<!--		disabling security for faster developments -->
+<!--		<dependency> -->
+<!--			<groupId>org.springframework.boot</groupId> -->
+<!--			<artifactId>spring-boot-starter-security</artifactId> -->
+<!--		</dependency> -->
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
