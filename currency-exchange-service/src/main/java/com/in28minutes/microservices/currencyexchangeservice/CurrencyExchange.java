@@ -2,22 +2,35 @@ package com.in28minutes.microservices.currencyexchangeservice;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class CurrencyExchange {
+	@Id
 	private Long id;
+
+	//Since from is a keyword in SQL, we cant use them as a column, to use a different column name than the variable name,
+	//we must use this annotation
+	@Column(name = "currency_from")
 	private String from;
+
+	@Column(name = "currency_to")
 	private String to;
-	private BigDecimal conversionMuliple;
+
+	private BigDecimal conversionMultiple;
 	private String environment;
 
 	public CurrencyExchange() {
 
 	}
 
-	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMuliple) {
+	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.conversionMuliple = conversionMuliple;
+		this.conversionMultiple = conversionMultiple;
 	}
 
 	public Long getId() {
@@ -44,12 +57,12 @@ public class CurrencyExchange {
 		this.to = to;
 	}
 
-	public BigDecimal getConversionMuliple() {
-		return conversionMuliple;
+	public BigDecimal getConversionMultiple() {
+		return conversionMultiple;
 	}
 
-	public void setConversionMuliple(BigDecimal conversionMuliple) {
-		this.conversionMuliple = conversionMuliple;
+	public void setConversionMultiple(BigDecimal conversionMuliple) {
+		this.conversionMultiple = conversionMuliple;
 	}
 
 	public String getEnvironment() {
