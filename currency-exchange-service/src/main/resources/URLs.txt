@@ -20,3 +20,11 @@ After spring.cloud.gateway.discovery.locator.lower-case-service-id=true,
 http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR
 http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
 http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+After routes changes via ApiGatewayConfigurations
+http://localhost:8765/currency-exchange/from/USD/to/INR
+http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+For using custom URLs
+http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
